@@ -12,9 +12,6 @@
   - [Prerequisites](#prerequisites)  
   - [Installation](#installation)  
 
-- [Author](#author)  
-- [License](#license)  
-- [Contact](#contact)  
 
 ---
 
