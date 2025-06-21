@@ -11,10 +11,7 @@
 - [Getting Started](#getting-started)  
   - [Prerequisites](#prerequisites)  
   - [Installation](#installation)  
-- [Usage](#usage)  
-  - [Book Endpoints](#book-endpoints)  
-  - [Borrow Endpoints](#borrow-endpoints)  
-- [Project Structure](#project-structure)  
+
 - [Author](#author)  
 - [License](#license)  
 - [Contact](#contact)  
@@ -67,7 +64,7 @@ A RESTful backend API for managing a library:
 
 
 
-## 🧭 Book Endpoints
+### 🧭 Book Endpoints
 | Method | Endpoint         | Description                 |
 | ------ | ---------------- | --------------------------- |
 | POST   | `/api/books`     | Create a new book           |
@@ -77,7 +74,7 @@ A RESTful backend API for managing a library:
 | DELETE | `/api/books/:id` | Delete a book               |
 
 
-## 🧭  Borrow Endpoints
+### 🧭  Borrow Endpoints
 
 | Method | Endpoint      | Description                            |
 | ------ | ------------- | -------------------------------------- |
@@ -85,3 +82,19 @@ A RESTful backend API for managing a library:
 | GET    | `/api/borrow` | Summary of borrowed counts per book    |
 
 
+
+
+### 🙋‍♂️ Author
+Sojib Sheikh
+
+Website – sojibsheikh.com
+
+Email – sojib02018@gmail.com
+
+GitHub – @sojibshekh
+
+### 📄 License
+Distributed under the MIT License.
+
+### ✉️ Contact
+Have feedback or need help? Reach out: sojib02018@gmail.com
