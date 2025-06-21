@@ -57,8 +57,28 @@ A RESTful backend API for managing a library:
 
   2. Install dependencies 
    ```bash
-    cd library-management-api 
+    cd next-lavel-a3 
     npm install
 
+3. Run the app in dev mode
+
+ 
+   ```bash
+    npm run dev
 
 
+| Method | Endpoint         | Description                 |
+| ------ | ---------------- | --------------------------- |
+| POST   | `/api/books`     | Create a new book           |
+| GET    | `/api/books`     | Get all books (with filter) |
+| GET    | `/api/books/:id` | Get a book by Id            |
+| PUT    | `/api/books/:id` | Update a book               |
+| DELETE | `/api/books/:id` | Delete a book               |
+
+
+
+
+| Method | Endpoint      | Description                            |
+| ------ | ------------- | -------------------------------------- |
+| POST   | `/api/borrow` | Borrow a book (decreases availability) |
+| GET    | `/api/borrow` | Summary of borrowed counts per book    |
