@@ -1,7 +1,7 @@
 
 
 
-import express, { Application, Request, Response } from 'express';
+import express, {  Request, Response } from 'express';
 import { Book } from '../models/book.models';
 import { Borrow } from '../models/borrow.model';
 
@@ -13,6 +13,8 @@ borrowRoutes.post('/borrow', async (req: Request, res: Response) => {
     const { book, quantity, dueDate } = req.body;
 
   const updatedBook = await Book.borrowBook(book, quantity);
+
+  console.log(updatedBook);
 
   const borrow = await Borrow.create({
     book,
@@ -65,11 +67,11 @@ borrowRoutes.get('/borrow', async (_req: Request, res: Response) => {
       message: 'Borrowed books summary retrieved successfully',
       data: summary,
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     res.status(500).json({
       success: false,
       message: 'Failed to retrieve borrowed books summary',
-      error: error.message,
+      error: 'An unknown error occurred',
     });
   }
 });
