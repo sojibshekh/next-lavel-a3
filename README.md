@@ -61,12 +61,11 @@ A RESTful backend API for managing a library:
     npm install
 
 3. Run the app in dev mode
-
- 
    ```bash
     npm run dev
 
 
+## 🧭 Book Endpoints
 | Method | Endpoint         | Description                 |
 | ------ | ---------------- | --------------------------- |
 | POST   | `/api/books`     | Create a new book           |
@@ -76,7 +75,7 @@ A RESTful backend API for managing a library:
 | DELETE | `/api/books/:id` | Delete a book               |
 
 
-
+## 🧭  Borrow Endpoints
 
 | Method | Endpoint      | Description                            |
 | ------ | ------------- | -------------------------------------- |
