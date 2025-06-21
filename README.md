@@ -53,4 +53,12 @@ A RESTful backend API for managing a library:
 1. Clone the repo  
    ```bash
    git clone https://github.com/sojibshekh/next-lavel-a3
-g
+
+
+  2. Install dependencies 
+   ```bash
+    cd library-management-api 
+    npm install
+
+
+
