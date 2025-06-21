@@ -55,7 +55,7 @@ A RESTful backend API for managing a library:
    git clone https://github.com/sojibshekh/next-lavel-a3
 
 
-  2. Install dependencies 
+2. Install dependencies 
    ```bash
     cd next-lavel-a3 
     npm install
@@ -63,6 +63,8 @@ A RESTful backend API for managing a library:
 3. Run the app in dev mode
    ```bash
     npm run dev
+
+
 
 
 ## 🧭 Book Endpoints
@@ -81,3 +83,5 @@ A RESTful backend API for managing a library:
 | ------ | ------------- | -------------------------------------- |
 | POST   | `/api/borrow` | Borrow a book (decreases availability) |
 | GET    | `/api/borrow` | Summary of borrowed counts per book    |
+
+
