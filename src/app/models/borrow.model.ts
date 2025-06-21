@@ -1,12 +1,6 @@
-import { Schema, model, Types } from 'mongoose';
-
-export interface IBorrow {
-  book: Types.ObjectId;
-  quantity: number;
-  dueDate: Date;
-}
-
-
+// src/app/models/borrow.model.ts
+import { Schema, model } from 'mongoose';
+import { IBorrow } from '../interfaces/borrow.interface';
 
 
 const borrowSchema = new Schema<IBorrow>(
@@ -15,7 +9,10 @@ const borrowSchema = new Schema<IBorrow>(
     quantity: { type: Number, required: true, min: 1 },
     dueDate: { type: Date, required: true },
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+    versionKey: false,
+  }
 );
 
 export const Borrow = model<IBorrow>('Borrow', borrowSchema);
