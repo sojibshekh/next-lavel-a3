@@ -83,8 +83,7 @@ A RESTful backend API for managing a library:
 
 
 
-
-### 🙋‍♂️ Author
+###  Author 🙋‍♂️
 Sojib Sheikh
 
 Website – sojibsheikh.com
@@ -93,8 +92,8 @@ Email – sojib02018@gmail.com
 
 GitHub – @sojibshekh
 
-### 📄 License
+###  License  📄
 Distributed under the MIT License.
 
-### ✉️ Contact
+###  Contact  ✉️
 Have feedback or need help? Reach out: sojib02018@gmail.com
