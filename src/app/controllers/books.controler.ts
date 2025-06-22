@@ -29,36 +29,16 @@ bookRoutes.post('/books', async (req: Request, res: Response) => {
 });
 
 
-// bookRoutes.get('/books', async (req: Request, res: Response) => {
-//   const { filter, sortBy = 'createdAt', sort = 'asc', limit = '10' } = req.query;
-//   const filterCondition: any = {};
-//   if (filter && typeof filter === 'string') {
-//     filterCondition.genre = filter;
-//   }
-//   const sortCondition: any = {};
-//   sortCondition[sortBy as string] = sort === 'asc' ? 1 : -1;
-//   const books= await Book.find(filterCondition).sort(sortCondition).limit(Number(limit))
-
-//  console.log(books);
-//     res.status(201).json({
-//         success: true,
-//         message: 'Books retrieved successfully',
-//         data: books,
-//     });
-
-// });
 
 bookRoutes.get('/books', async (req: Request, res: Response) => {
-  // Cast req.query to your typed interface
   const { filter, sortBy = 'createdAt', sort = 'asc', limit = '10' } = req.query as unknown as BookQuery;
 
-  // Build filter condition
   const filterCondition: Record<string, string> = {};
   if (filter) {
     filterCondition.genre = filter;
   }
 
-  // Build sort condition
+  
   const sortCondition: Record<string, 1 | -1> = {};
   sortCondition[sortBy] = sort === 'asc' ? 1 : -1;
 
