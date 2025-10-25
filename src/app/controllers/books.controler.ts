@@ -17,7 +17,6 @@ import { Book } from '../models/book.models';
 bookRoutes.post('/books', async (req: Request, res: Response) => {
 
     const body = req.body;
-    
     const book = await Book.create(body)
 
     res.status(201).json({
@@ -70,7 +69,7 @@ bookRoutes.get('/books/:bookId', async (req: Request, res: Response) => {
 
     }); 
 
-bookRoutes.patch('/books/:bookId', async (req: Request, res: Response) => {
+bookRoutes.put('/books/:bookId', async (req: Request, res: Response) => {
 
     const bookId = req.params.bookId
     const updatedBody = req.body;

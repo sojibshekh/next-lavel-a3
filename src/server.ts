@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 
 
 
-const PORT =8000;
+const PORT =5000;
 async function main(){
     try{
 

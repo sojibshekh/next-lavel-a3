@@ -67,6 +67,7 @@ borrowRoutes.get('/borrow', async (_req: Request, res: Response) => {
       message: 'Borrowed books summary retrieved successfully',
       data: summary,
     });
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error: unknown) {
     res.status(500).json({
       success: false,
