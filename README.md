@@ -78,7 +78,9 @@ A RESTful backend API for managing a library:
 | POST   | `/api/borrow` | Borrow a book (decreases availability) |
 | GET    | `/api/borrow` | Summary of borrowed counts per book    |
 
+### live wesite 
 
+https://library-management-assignment-plum.vercel.app/
 
 ###  Author 🙋‍♂️
 Sojib Sheikh

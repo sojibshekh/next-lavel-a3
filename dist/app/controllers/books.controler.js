@@ -25,31 +25,12 @@ exports.bookRoutes.post('/books', (req, res) => __awaiter(void 0, void 0, void 0
         book
     });
 }));
-// bookRoutes.get('/books', async (req: Request, res: Response) => {
-//   const { filter, sortBy = 'createdAt', sort = 'asc', limit = '10' } = req.query;
-//   const filterCondition: any = {};
-//   if (filter && typeof filter === 'string') {
-//     filterCondition.genre = filter;
-//   }
-//   const sortCondition: any = {};
-//   sortCondition[sortBy as string] = sort === 'asc' ? 1 : -1;
-//   const books= await Book.find(filterCondition).sort(sortCondition).limit(Number(limit))
-//  console.log(books);
-//     res.status(201).json({
-//         success: true,
-//         message: 'Books retrieved successfully',
-//         data: books,
-//     });
-// });
 exports.bookRoutes.get('/books', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    // Cast req.query to your typed interface
     const { filter, sortBy = 'createdAt', sort = 'asc', limit = '10' } = req.query;
-    // Build filter condition
     const filterCondition = {};
     if (filter) {
         filterCondition.genre = filter;
     }
-    // Build sort condition
     const sortCondition = {};
     sortCondition[sortBy] = sort === 'asc' ? 1 : -1;
     const books = yield book_models_1.Book.find(filterCondition)
@@ -71,7 +52,7 @@ exports.bookRoutes.get('/books/:bookId', (req, res) => __awaiter(void 0, void 0,
         book
     });
 }));
-exports.bookRoutes.patch('/books/:bookId', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+exports.bookRoutes.put('/books/:bookId', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const bookId = req.params.bookId;
     const updatedBody = req.body;
     const note = yield book_models_1.Book.findByIdAndUpdate(bookId, updatedBody, { new: true });

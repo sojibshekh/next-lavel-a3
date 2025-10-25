@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Borrow = void 0;
-// src/app/models/borrow.model.ts
 const mongoose_1 = require("mongoose");
 const borrowSchema = new mongoose_1.Schema({
     book: { type: mongoose_1.Schema.Types.ObjectId, ref: 'Book', required: true },

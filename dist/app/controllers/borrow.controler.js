@@ -66,6 +66,7 @@ exports.borrowRoutes.get('/borrow', (_req, res) => __awaiter(void 0, void 0, voi
             message: 'Borrowed books summary retrieved successfully',
             data: summary,
         });
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
     }
     catch (error) {
         res.status(500).json({
